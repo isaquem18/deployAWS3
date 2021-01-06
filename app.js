@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-
+const port = 80 || 4444;
+      
 app.get('/', (req, res) => {
   const { nome } = req.query;
   return res.json({
@@ -25,4 +26,4 @@ app.get('/produtos', (req, res) => {
   })
 })
 
-app.listen(3333);
+app.listen(port);
